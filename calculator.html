@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #d3d7d4;
+    margin-top: 20px;
+    font-size: 16px;
+    box-sizing: content-box;
+}
+
+#calculator {
+    width: 90%;
+    border: 1px solid #9b95c9;
+    background-color: #afb4db;
+    margin-left: 5%;
+    border-radius: 5%;
+}
+
+.LOGO {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.LOGO .name {
+    font-size: 1.5em;
+    color: #8552a1;
+}
+
+#shuRu {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    /* border: 1px solid gold; */
+}
+
+#shuRu .screen {
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    padding-left: 5%;
+}
+
+#shuRu .screen input {
+    text-align: right;
+    padding-right: 2%;
+    font-size: 1.5em;
+}
+
+#keys {
+    width: 90%;
+    /* border: 1px solid gold; */
+    height: 200px;
+    line-height: 200px;
+    padding: 5% ;
+}
+
+#keys .buttons {
+    float: left;
+    width: 44px;
+    height: 36px;
+    text-align: center;
+    background-color: lightgray;
+    margin: 0 17px 20px 0;
+}
+
+    </style>
+</head>
+
+<body onload="onLoad()">
+
+    <div id="calculator">
+        <div class="LOGO">
+            <span class="name">小仙女的计算器</span>
+        </div>
+        <div id="shuRu">
+            <!--screen输入栏-->
+            <div class="screen">
+                <input type="text" id="screenName" name="screenName" class="screen" value="" onfocus="jsq(this)">
+            </div>
+        </div>
+        <div id="keys">
+            <!-- operators and other keys -->
+            <!--第一排-->
+            <input type="button" id="7" onclick="jsq(this.id)" value="7" class="buttons">
+            <input type="button" id="8" onclick="jsq(this.id)" value="8" class="buttons">
+            <input type="button" id="9" onclick="jsq(this.id)" value="9" class="buttons">
+            <input type="button" id="Back" onclick="tuiGe()" value="Back" class="buttons">
+            <input type="button" id="C" onclick="clearNum()" value="C" class="buttons" style="margin-right:0px">
+            <!--第二排-->
+            <input type="button" id="4" onclick="jsq(this.id)" value="4" class="buttons">
+            <input type="button" id="5" onclick="jsq(this.id)" value="5" class="buttons">
+            <input type="button" id="6" onclick="jsq(this.id)" value="6" class="buttons">
+            <input type="button" id="*" onclick="jsq(this.id)" value="*" class="buttons">
+            <input type="button" id="/" onclick="jsq(this.id)" value="/" class="buttons" style="margin-right:0px">
+            <!--第三排-->
+            <input type="button" id="1" onclick="jsq(this.id)" value="1" class="buttons">
+            <input type="button" id="2" onclick="jsq(this.id)" value="2" class="buttons">
+            <input type="button" id="3" onclick="jsq(this.id)" value="3" class="buttons">
+            <input type="button" id="+" onclick="jsq(this.id)" value="+" class="buttons">
+            <input type="button" id="-" onclick="jsq(this.id)" value="-" class="buttons" style="margin-right:0px">
+            <!--第四排-->
+            <input type="button" id="0" onclick="jsq(this.id)" value="0" class="buttons">
+            <input type="button" id="00" onclick="jsq(this.id)" value="00" class="buttons">
+            <input type="button" id="." onclick="jsq(this.id)" value="." class="buttons">
+            <input type="button" id="%" onclick="jsq(this.id)" value="%" class="buttons">
+            <input type="button" id="eva" onclick="eva()" value="=" class="buttons" style="margin-right:0px">
+        </div>
+        <!-- <div class="footer">
+            <span class="aside">欢迎小仙女下次再来哦~</span>
+        </div> -->
+    </div>
+</body>
+<script>
+    var num = 0; // 定义第一个输入的数据
+    function jsq(num) {
+        //获取当前输入
+        document.getElementById('screenName').value += document.getElementById(num).value
+    }
+    function eva() {
+        //计算输入结果
+        document.getElementById("screenName").value = eval(document.getElementById("screenName").value)
+    }
+    function clearNum() {
+        //清0
+        document.getElementById("screenName").value = null;
+        document.getElementById("screenName").focus()
+    }
+    function tuiGe() {
+        //退格
+        var arr = document.getElementById("screenName")
+        arr.value = arr.value.substring(0, arr.value.length - 1);
+    }
+    function onLoad() {
+        //加载完毕后光标自动对应到输入框
+        document.getElementById("screenName").focus()
+    }
+</script>
+
+</html>
