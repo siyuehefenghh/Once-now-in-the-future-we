@@ -5,77 +5,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-
-        body {
-            background-color: #e9e;
-        }
-        .box {
-            padding: 10px;
-        }
-
-        .top {
-            position: relative;
-        }
-
-        h3 {
-            color: gold;
-            position: absolute;
-            top: 0;
-            left: 0;
-            margin-top: 1%;
-            text-align: center;
-        }
-
-        img {
-            width: 50%;
-            margin-top: 11%;
-        }
-
-        .a {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-top: 10%;
-        }
-
-        a {
-            text-decoration: none;
-            color: skyblue;
-            margin-right: 5px;
-        }
-
-        a:hover {
-            color: gold;
-        }
-
-
-
-
-    </style>
+    <title>慧慧同学的网站哦~~~</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./swiper.min.css">
 </head>
 
 <body>
-    <div class="box">
-        <div class="top">
-            <h3>慧慧同学，这是你要的效果吗？</h3>
-            <div class="a">
-                <a href="./calculator.html">点我会出现计算器哦~~~</a>
-                <hr>
-                <a href="./calendar.html">点我会出现日历哦~~~</a>
-                <hr>
-                <a href="./article.html">点我可以欣赏文章哦~~~</a>
-            </div>
+    <!-- title start-->
+    <div class="title">
+        <h1>爱喝酸奶的小姑娘~</h1>
+    </div>
+    <!-- title end -->
+
+        <div class="h3">
+            <a href="./shanghai_photo.html"><h3>小姑娘来到上海咯~</h3></a>
         </div>
+    <!-- swiper start -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./shanghai3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./shanghai1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./shanghai2.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- 如果需要滚动条 -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+    <!-- swiper end -->
+
+    <div class="nav">
+        <div class="a">
+            <ul>
+                <li><a href="./calculator/calculator.html">点我会出现计算器哦~</a></li>
+                <li><a href="./calendar/calendar.html">点我会出现日历哦~</a></li>
+                <li><a href="./article/article.html">点我可以欣赏文章哦~</a></li>
+                <li><a href="./shanghai_photo.html">点我可以看图片哦~</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
         <img src="https://i.loli.net/2021/04/29/6Qy5xhNndMZpsmF.jpg" alt="">
-        
     </div>
 
 </body>
+<script src="./swiper.min.js"></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        // direction: 'vertical', // 垂直切换选项
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // 如果需要滚动条
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    })
+</script>
 
 </html>

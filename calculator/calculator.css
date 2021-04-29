@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    background-color: #d3d7d4;
+    margin-top: 20px;
+    font-size: 16px;
+    box-sizing: content-box;
+}
+
+#calculator {
+    width: 90%;
+    border: 1px solid #9b95c9;
+    background-color: #afb4db;
+    margin-left: 5%;
+    border-radius: 5%;
+}
+
+.LOGO {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+.LOGO .name {
+    font-size: 1.5em;
+    color: #8552a1;
+}
+
+#shuRu {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    /* border: 1px solid gold; */
+}
+
+#shuRu .screen {
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+    padding-left: 5%;
+}
+
+#shuRu .screen input {
+    text-align: right;
+    padding-right: 2%;
+    font-size: 1.5em;
+}
+
+#keys {
+    width: 90%;
+    /* border: 1px solid gold; */
+    height: 200px;
+    line-height: 200px;
+    padding: 5% ;
+}
+
+#keys .buttons {
+    float: left;
+    width: 44px;
+    height: 36px;
+    text-align: center;
+    background-color: lightgray;
+    margin: 0 17px 20px 0;
+}
